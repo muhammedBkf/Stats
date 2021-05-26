@@ -1,0 +1,93 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css">
+</head>
+
+<body>
+    <section class="section">
+        <div class="container   is-flex   is-align-self-center	is-align-content-center	is-align-items-center	 is-justify-content-center			">
+            <h1 class="title is-1 mb-4 has-text-primary	">Statistiques du mercredi 26/05 </h1>
+        </div>
+        <div class="columns">
+            <div class="column">
+                <div class="box">
+                    <div
+                        class="container  is-flex   is-align-self-center	is-align-content-center	is-align-items-center	 is-justify-content-center				">
+                        <h1 class="title is-2 ">1CP Stats</h1>
+                    </div>
+                    <div class="container">
+                        <canvas id="myChart1CP" ></canvas>
+                    </div>
+                </div>
+            </div>
+            <div class="column">
+                <div class="box ">
+                    <div
+                        class="container  is-flex   is-align-self-center	is-align-content-center	is-align-items-center	 is-justify-content-center				">
+                        <h1 class="title is-2">2CP Stats</h1>
+                    </div>
+                    <div class="container">
+                        <canvas id="myChart2CP" ></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+</body>
+<script>
+    var ctx = document.getElementById('myChart1CP');
+    var myChart = new Chart(ctx, {
+        type: 'pie',
+        data: {
+            labels: ['Présents', 'Absents'],
+            datasets: [{
+                label: '# of Votes',
+                data: [161, 100],
+                backgroundColor: [
+                    'rgba(54, 162, 235, 0.2)',
+                    'rgba(255, 99, 132, 0.2)',
+                ],
+                borderColor: [
+                    'rgba(54, 162, 235, 1)',
+                    'rgba(255, 99, 132, 1)',
+                ],
+                borderWidth: 1
+            }]
+        },
+        options: {
+
+        }
+    });
+    var ctx = document.getElementById('myChart2CP');
+    var myChart = new Chart(ctx, {
+        type: 'pie',
+        data: {
+            labels: ['Présents', 'Absents'],
+            datasets: [{
+                label: '# of Votes',
+                data: [194, 28],
+                backgroundColor: [
+                    'rgba(54, 162, 235, 0.2)',
+                    'rgba(255, 99, 132, 0.2)',
+                ],
+                borderColor: [
+                    'rgba(54, 162, 235, 1)',
+                    'rgba(255, 99, 132, 1)',
+                ],
+                borderWidth: 1
+            }]
+        },
+        options: {
+
+        }
+    });
+</script>
+
+</html>
